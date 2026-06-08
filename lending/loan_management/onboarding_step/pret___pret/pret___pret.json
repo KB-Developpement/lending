@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Cr\u00e9er le pr\u00eat",
+ "creation": "2026-06-06 20:38:18.997029",
+ "description": "## Pr\u00eat\nCr\u00e9\u00e9 depuis la demande approuv\u00e9e. V\u00e9rifiez le **taux**, la **dur\u00e9e**, la **date de d\u00e9caissement**.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-06 20:38:18.997029",
+ "modified_by": "Administrator",
+ "name": "Pret - Pret",
+ "owner": "Administrator",
+ "reference_document": "Loan",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Cr\u00e9er le pr\u00eat",
+ "validate_action": 1
+}

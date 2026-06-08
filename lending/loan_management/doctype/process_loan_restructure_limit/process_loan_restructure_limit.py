@@ -118,10 +118,10 @@ def update_or_create_limit_log(
 				"limit_percent": limit_details.limit_percent,
 				"limit_amount": limit_details.limit_amount,
 				"utilized_limit": limit_details.utilized_limit,
-				"in_process_limit": limit_details.in_process_amount,
+				"in_process_limit": limit_details.in_process_limit,
 				"available_limit": flt(limit_details.limit_amount)
 				- flt(limit_details.utilized_limit)
-				- flt(limit_details.in_process_amount),
+				- flt(limit_details.in_process_limit),
 				"delinquent_principal_outstanding": delinquent_limit_details.delinquent_principal_outstanding,
 				"delinquent_utilized_limit": delinquent_limit_details.delinquent_utilized_limit,
 				"delinquent_limit_percent": delinquent_limit_details.delinquent_limit_percent,

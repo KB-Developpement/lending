@@ -69,7 +69,8 @@ class LoanInterestAccrual(LoanController):
 		if not self.posting_date:
 			self.posting_date = nowdate()
 
-		self.accrual_date = nowdate()
+		if not self.accrual_date:
+			self.accrual_date = nowdate()
 
 		if not self.interest_amount:
 			frappe.throw(_("Interest Amount is mandatory"))

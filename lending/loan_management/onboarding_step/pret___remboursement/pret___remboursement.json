@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Enregistrer un remboursement",
+ "creation": "2026-06-06 20:38:19.059990",
+ "description": "## Remboursement\nImpute le paiement (principal, int\u00e9r\u00eats, p\u00e9nalit\u00e9s) selon la s\u00e9quence d'imputation.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-06 20:38:19.059990",
+ "modified_by": "Administrator",
+ "name": "Pret - Remboursement",
+ "owner": "Administrator",
+ "reference_document": "Loan Repayment",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Enregistrer un remboursement",
+ "validate_action": 1
+}

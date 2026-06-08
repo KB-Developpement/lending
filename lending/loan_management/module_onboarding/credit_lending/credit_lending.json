@@ -1,0 +1,44 @@
+{
+ "allow_roles": [
+  {
+   "role": "Loan Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2026-06-06 20:38:19.064886",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://docs.frappe.io/erpnext/user/manual/en/lending",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-06-06 20:38:19.064886",
+ "modified_by": "Administrator",
+ "module": "Loan Management",
+ "name": "Credit Lending",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Pret - Produit"
+  },
+  {
+   "step": "Pret - Classifications 14-03"
+  },
+  {
+   "step": "Pret - Demande"
+  },
+  {
+   "step": "Pret - Pret"
+  },
+  {
+   "step": "Pret - Decaissement"
+  },
+  {
+   "step": "Pret - Remboursement"
+  }
+ ],
+ "subtitle": "Du produit de pr\u00eat au remboursement",
+ "success_message": "Configuration termin\u00e9e \u2014 vous \u00eates pr\u00eat !",
+ "title": "Mise en route \u2014 Cr\u00e9dit (Lending)"
+}

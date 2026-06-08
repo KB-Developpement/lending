@@ -1,0 +1,21 @@
+{
+ "action": "Go to Page",
+ "action_label": "Voir les classifications",
+ "creation": "2026-06-06 20:38:18.935279",
+ "description": "## Classifications Banque d'Alg\u00e9rie 14-03\n4 classes : **Courantes \u2192 Probl\u00e8mes Potentiels \u2192 Tr\u00e8s Risqu\u00e9es \u2192 Compromises**, d\u00e9j\u00e0 configur\u00e9es avec leurs plages par soci\u00e9t\u00e9.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-06 20:38:18.935279",
+ "modified_by": "Administrator",
+ "name": "Pret - Classifications 14-03",
+ "owner": "Administrator",
+ "path": "/app/loan-classification",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "V\u00e9rifier les classifications (r\u00e8glement 14-03)",
+ "validate_action": 1
+}

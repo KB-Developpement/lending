@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Nouvelle demande",
+ "creation": "2026-06-06 20:38:18.959471",
+ "description": "## Demande de pr\u00eat\nDemandeur, produit, montant. \u00c0 **approuver** avant de cr\u00e9er le pr\u00eat.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-06 20:38:18.959471",
+ "modified_by": "Administrator",
+ "name": "Pret - Demande",
+ "owner": "Administrator",
+ "reference_document": "Loan Application",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Cr\u00e9er une demande de pr\u00eat",
+ "validate_action": 1
+}

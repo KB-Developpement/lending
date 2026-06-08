@@ -173,7 +173,7 @@
    "label": "Status",
    "mandatory_depends_on": "is_imported",
    "no_copy": 1,
-   "options": "\nDraft\nSanctioned\nPartially Disbursed\nDisbursed\nActive\nLoan Closure Requested\nClosed\nWritten Off\nSettled",
+   "options": "\nDraft\nSanctioned\nPartially Disbursed\nDisbursed\nActive\nLoan Closure Requested\nClosed\nWritten Off\nSettled\nCancelled",
    "read_only": 1,
    "search_index": 1
   },

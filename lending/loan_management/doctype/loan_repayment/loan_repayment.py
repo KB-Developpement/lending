@@ -1098,7 +1098,6 @@ class LoanRepayment(LoanController):
 				self.update_repayment_schedule_status()
 			else:
 				if self.repayment_schedule_type != "Line of Credit":
-					query = query.set(loan.status, "Active")
 					query = query.set(loan.status, "Settled")
 					query = query.set(loan.settlement_date, self.value_date)
 				self.update_repayment_schedule_status()

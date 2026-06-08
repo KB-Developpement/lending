@@ -851,9 +851,9 @@ def request_loan_closure(loan: str, posting_date: str | None = None, auto_close:
 
 	loan_product, loan_status = frappe.get_value("Loan", loan, ["loan_product", "status"])
 
-	write_off_limit = frappe.get_value("Loan Product", loan_product, "write_off_amount")
+	write_off_limit = flt(frappe.get_value("Loan Product", loan_product, "write_off_amount"))
 
-	if pending_amount and abs(pending_amount) < write_off_limit or loan_status == "Settled":
+	if (pending_amount and abs(pending_amount) < write_off_limit) or loan_status == "Settled":
 		# Auto create loan write off and update status as loan closure requested
 		write_off = make_loan_write_off(loan, posting_date=posting_date)
 		write_off.submit()
@@ -928,8 +928,8 @@ def make_loan_disbursement(
 	disbursement_entry.applicant_type = loan_doc.applicant_type
 	disbursement_entry.applicant = loan_doc.applicant
 	disbursement_entry.company = loan_doc.company
-	disbursement_entry.disbursement_date = posting_date or nowdate()
-	disbursement_entry.posting_date = disbursement_date or nowdate()
+	disbursement_entry.disbursement_date = disbursement_date or nowdate()
+	disbursement_entry.posting_date = posting_date or nowdate()
 	disbursement_entry.bank_account = bank_account
 	disbursement_entry.repayment_start_date = repayment_start_date or loan_doc.repayment_start_date
 	disbursement_entry.repayment_frequency = repayment_frequency or loan_doc.repayment_frequency

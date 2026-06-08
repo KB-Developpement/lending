@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Cr\u00e9er un produit de pr\u00eat",
+ "creation": "2026-06-06 20:38:18.929742",
+ "description": "## Produit de pr\u00eat\nD\u00e9finissez **taux**, **dur\u00e9e**, et les **comptes** (d\u00e9caissement, int\u00e9r\u00eats, \u00e0 recevoir, p\u00e9nalit\u00e9s, suspens). Comptes non typ\u00e9s *Receivable* pour l'\u00e9criture sans tiers.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-06 20:38:18.929742",
+ "modified_by": "Administrator",
+ "name": "Pret - Produit",
+ "owner": "Administrator",
+ "reference_document": "Loan Product",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Configurer un produit de pr\u00eat",
+ "validate_action": 1
+}

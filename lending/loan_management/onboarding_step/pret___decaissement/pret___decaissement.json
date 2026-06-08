@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "D\u00e9caisser",
+ "creation": "2026-06-06 20:38:19.025901",
+ "description": "## D\u00e9caissement\nG\u00e9n\u00e8re l'**\u00e9ch\u00e9ancier de remboursement** et les **int\u00e9r\u00eats courus** \u00e0 partir de la **date de d\u00e9caissement**.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-06 20:38:19.025901",
+ "modified_by": "Administrator",
+ "name": "Pret - Decaissement",
+ "owner": "Administrator",
+ "reference_document": "Loan Disbursement",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "D\u00e9caisser le pr\u00eat",
+ "validate_action": 1
+}
