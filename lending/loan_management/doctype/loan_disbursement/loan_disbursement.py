@@ -18,9 +18,9 @@ from frappe.utils import (
 	nowdate,
 )
 
-import erpnext
-from erpnext.accounts.general_ledger import process_gl_map
-from erpnext.controllers.sales_and_purchase_return import make_return_doc
+import kb_pro
+from kb_pro.accounts.general_ledger import process_gl_map
+from kb_pro.controllers.sales_and_purchase_return import make_return_doc
 
 from lending.loan_management.controllers.loan_controller import LoanController
 from lending.loan_management.doctype.loan.loan import get_cyclic_date
@@ -351,7 +351,7 @@ class LoanDisbursement(LoanController):
 		self.posting_date = nowdate()
 
 		if not self.cost_center:
-			self.cost_center = erpnext.get_default_cost_center(self.company)
+			self.cost_center = kb_pro.get_default_cost_center(self.company)
 
 		if not self.disbursement_account and self.bank_account:
 			self.disbursement_account = frappe.db.get_value("Bank Account", self.bank_account, "account")

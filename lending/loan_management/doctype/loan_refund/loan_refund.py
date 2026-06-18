@@ -5,7 +5,7 @@ import frappe
 from frappe import _
 from frappe.utils import flt, getdate
 
-import erpnext
+import kb_pro
 
 from lending.loan_management.controllers.loan_controller import LoanController
 from lending.loan_management.doctype.loan_repayment.loan_repayment import get_net_paid_amount
@@ -48,7 +48,7 @@ class LoanRefund(LoanController):
 
 	def set_missing_values(self):
 		if not self.cost_center:
-			self.cost_center = erpnext.get_default_cost_center(self.company)
+			self.cost_center = kb_pro.get_default_cost_center(self.company)
 
 	def validate_refund_amount(self):
 		net_paid_amount = get_net_paid_amount(self.loan)

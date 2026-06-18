@@ -1,6 +1,6 @@
 import frappe
 
-from erpnext.accounts.doctype.accounting_dimension.accounting_dimension import (
+from kb_pro.accounts.doctype.accounting_dimension.accounting_dimension import (
 	get_accounting_dimensions,
 )
 

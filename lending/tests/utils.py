@@ -1,7 +1,7 @@
 import frappe
 from frappe.utils import add_days, nowdate
 
-from erpnext.tests.utils import ERPNextTestSuite
+from frappe.tests.utils import FrappeTestCase
 
 from lending.tests.test_utils import (
 	create_loan_accounts,
@@ -57,7 +57,13 @@ class BootStrapTestData:
 BootStrapTestData()
 
 
-class LendingTestSuite(ERPNextTestSuite):
-	"""Class for creating Lending test records"""
+class LendingTestSuite(FrappeTestCase):
+	"""Class for creating Lending test records.
+
+	Previously subclassed ``erpnext.tests.utils.ERPNextTestSuite``. kb_pro (the
+	in-house ERPNext fork installed in this bench) does not ship that helper, so
+	this base now extends frappe's ``FrappeTestCase`` directly. The per-test
+	master data is bootstrapped by ``BootStrapTestData()`` at import time.
+	"""
 
 	pass

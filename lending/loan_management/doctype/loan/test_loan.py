@@ -15,7 +15,7 @@ from frappe.utils import (
 	random_string,
 )
 
-from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 from lending.loan_management.doctype.loan.loan import request_loan_closure, unpledge_security
 from lending.loan_management.doctype.loan_application.loan_application import (
@@ -2444,7 +2444,7 @@ class TestLoan(LendingTestSuite):
 			self.assertEqual(str(row.get("payment_date")), payment_dates[i])
 
 	def test_charges_payment(self):
-		from erpnext.accounts.doctype.sales_invoice.test_sales_invoice import create_sales_invoice
+		from kb_pro.accounts.doctype.sales_invoice.test_sales_invoice import create_sales_invoice
 
 		loan = create_loan(
 			"_Test Customer 1",
@@ -2642,7 +2642,7 @@ class TestLoan(LendingTestSuite):
 		repayment.submit()
 
 	def test_npa_marking_for_customer(self):
-		from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+		from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 		customer = frappe.get_doc(get_customer_dict("NPA Customer 1")).insert()
 		frappe.db.set_value("Loan Product", "Term Loan Product 4", "days_past_due_threshold_for_npa", 90)
@@ -2910,7 +2910,7 @@ class TestLoan(LendingTestSuite):
 		self.assertEqual(schedule_details[0].interest_amount, interest_amount)
 
 	def test_npa_marking_for_customer_via_scheduler(self):
-		from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+		from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 		from lending.loan_management.doctype.process_loan_classification.process_loan_classification import (
 			process_loan_classification_batch,
@@ -3134,7 +3134,7 @@ class TestLoan(LendingTestSuite):
 
 	def test_interest_accrual_creates_suspense_jv_for_npa_loan(self):
 		set_loan_accrual_frequency("Daily")
-		from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+		from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 		customer = frappe.get_doc(get_customer_dict("NPA Customer 1")).insert()
 		frappe.db.set_value("Loan Product", "Term Loan Product 4", "days_past_due_threshold_for_npa", 90)

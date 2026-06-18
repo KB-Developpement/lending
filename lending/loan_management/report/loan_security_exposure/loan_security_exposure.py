@@ -5,7 +5,7 @@
 from frappe import _
 from frappe.utils import flt
 
-import erpnext
+import kb_pro
 
 from lending.loan_management.report.applicant_wise_loan_security_exposure.applicant_wise_loan_security_exposure import (
 	get_applicant_wise_total_loan_security_qty,
@@ -101,7 +101,7 @@ def get_data(filters):
 	current_pledges, total_portfolio_value = get_company_wise_loan_security_details(
 		filters, loan_security_details
 	)
-	currency = erpnext.get_company_currency(filters.get("company"))
+	currency = kb_pro.get_company_currency(filters.get("company"))
 
 	for security, value in current_pledges.items():
 		if value.get("qty"):

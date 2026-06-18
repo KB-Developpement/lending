@@ -1,9 +1,9 @@
 import frappe
 from frappe.utils import date_diff, now_datetime, nowdate
 
-from erpnext.selling.doctype.customer.test_customer import get_customer_dict
-from erpnext.setup.setup_wizard.operations.install_fixtures import set_global_defaults
-from erpnext.setup.utils import enable_all_roles_and_domains
+from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
+from kb_pro.setup.setup_wizard.operations.install_fixtures import set_global_defaults
+from kb_pro.setup.utils import enable_all_roles_and_domains
 
 from lending.loan_management.doctype.loan_application.loan_application import (
 	create_loan_security_assignment,

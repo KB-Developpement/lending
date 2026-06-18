@@ -8,7 +8,7 @@ from frappe.query_builder import DocType
 from frappe.query_builder import functions as fn
 from frappe.utils import cint, flt, get_datetime, getdate
 
-import erpnext
+import kb_pro
 
 from lending.loan_management.controllers.loan_controller import LoanController
 from lending.loan_management.doctype.loan_repayment.loan_repayment import (
@@ -48,7 +48,7 @@ class LoanWriteOff(LoanController):
 
 	def set_missing_values(self):
 		if not self.cost_center:
-			self.cost_center = erpnext.get_default_cost_center(self.company)
+			self.cost_center = kb_pro.get_default_cost_center(self.company)
 
 		if not self.write_off_account:
 			self.write_off_account = frappe.db.get_value(

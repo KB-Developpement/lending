@@ -4,7 +4,7 @@ import frappe
 from frappe import _
 from frappe.utils import cint, flt
 
-from erpnext.accounts.general_ledger import make_gl_entries
+from kb_pro.accounts.general_ledger import make_gl_entries
 
 from lending.loan_management.doctype.loan_interest_accrual.loan_interest_accrual import (
 	create_loan_demand,

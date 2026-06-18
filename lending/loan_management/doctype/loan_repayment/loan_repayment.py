@@ -12,8 +12,8 @@ from frappe.query_builder import functions as fn
 from frappe.query_builder.functions import Coalesce, Max, Round, Sum
 from frappe.utils import add_days, cint, flt, get_datetime, getdate, random_string
 
-import erpnext
-from erpnext.accounts.general_ledger import make_reverse_gl_entries, process_gl_map
+import kb_pro
+from kb_pro.accounts.general_ledger import make_reverse_gl_entries, process_gl_map
 
 from lending.loan_management.controllers.loan_controller import LoanController
 from lending.loan_management.doctype.loan_limit_change_log.loan_limit_change_log import (
@@ -802,7 +802,7 @@ class LoanRepayment(LoanController):
 		precision = cint(frappe.db.get_default("currency_precision")) or 2
 
 		if not self.cost_center:
-			self.cost_center = erpnext.get_default_cost_center(self.company)
+			self.cost_center = kb_pro.get_default_cost_center(self.company)
 
 		self.interest_payable = flt(amounts["interest_amount"], precision)
 		self.penalty_amount = flt(amounts["penalty_amount"], precision)

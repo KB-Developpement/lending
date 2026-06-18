@@ -6,7 +6,7 @@ import frappe
 from frappe import _
 from frappe.utils import flt
 
-import erpnext
+import kb_pro
 
 
 def execute(filters=None):
@@ -105,7 +105,7 @@ def get_data(filters):
 		filters, loan_security_details
 	)
 
-	currency = erpnext.get_company_currency(filters.get("company"))
+	currency = kb_pro.get_company_currency(filters.get("company"))
 
 	for key, qty in pledge_values.items():
 		if qty:

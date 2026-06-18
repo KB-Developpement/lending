@@ -35,7 +35,7 @@ class TestSanctionedLoanAmount(LendingTestSuite):
 		create_loan_security_price("Test Security 2", 250, "Nos", nowdate(), add_days(nowdate(), 1), update_if_existing=True)
 
 	def test_sanctioned_loan_amount_limit_for_secured_loan(self):
-		from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+		from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 		pledge = [
 			{
@@ -131,7 +131,7 @@ class TestSanctionedLoanAmount(LendingTestSuite):
 		self.assertEqual(sanctioned_amount_limit, 1000000)
 
 	def test_sanctioned_limit_updates_on_security_price_increase(self):
-		from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+		from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 		customer = frappe.get_doc(get_customer_dict("Sanctioned Amount Customer")).insert().name
 

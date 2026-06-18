@@ -3,7 +3,7 @@
 
 import frappe
 
-from erpnext.setup.doctype.employee.test_employee import make_employee
+from kb_pro.setup.doctype.employee.test_employee import make_employee
 
 from lending.tests.test_utils import (
 	create_loan_accounts,

@@ -5,7 +5,7 @@ import frappe
 from frappe import _
 from frappe.utils import add_days, nowdate
 
-import erpnext
+import kb_pro
 
 from lending.loan_management.controllers.loan_controller import LoanController
 from lending.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual import (
@@ -65,7 +65,7 @@ class LoanBalanceAdjustment(LoanController):
 			self.posting_date = nowdate()
 
 		if not self.cost_center:
-			self.cost_center = erpnext.get_default_cost_center(self.company)
+			self.cost_center = kb_pro.get_default_cost_center(self.company)
 
 		if not self.adjustment_receivable_account:
 			self.adjustment_receivable_account = frappe.db.get_value("Loan", self.loan, "loan_account")

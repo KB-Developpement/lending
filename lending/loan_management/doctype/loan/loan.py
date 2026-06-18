@@ -23,9 +23,9 @@ from frappe.utils import (
 )
 from frappe.utils.caching import redis_cache
 
-import erpnext
-from erpnext.accounts.doctype.journal_entry.journal_entry import get_payment_entry
-from erpnext.accounts.general_ledger import process_gl_map
+import kb_pro
+from kb_pro.accounts.doctype.journal_entry.journal_entry import get_payment_entry
+from kb_pro.accounts.general_ledger import process_gl_map
 
 from lending.loan_management.controllers.loan_controller import LoanController
 from lending.loan_management.doctype.loan_demand.loan_demand import create_loan_demand
@@ -531,7 +531,7 @@ class Loan(LoanController):
 
 	def set_missing_fields(self):
 		if not self.company:
-			self.company = erpnext.get_default_company()
+			self.company = kb_pro.get_default_company()
 
 		if not self.posting_date:
 			self.posting_date = nowdate()
@@ -1937,7 +1937,7 @@ def move_receivable_charges_to_suspense_ledger(
 def get_base_charge_amount(
 	charge_type, amount, company, loan, income_account, receivable_account, applicant
 ):
-	from erpnext import get_default_currency
+	from kb_pro import get_default_currency
 
 	si = frappe.get_doc(
 		{
@@ -2007,7 +2007,7 @@ def make_journal_entry(
 					"debit": amount,
 					"reference_type": "Loan",
 					"reference_name": loan,
-					"cost_center": erpnext.get_default_cost_center(company),
+					"cost_center": kb_pro.get_default_cost_center(company),
 				},
 				{
 					"account": credit_account,
@@ -2015,7 +2015,7 @@ def make_journal_entry(
 					"credit": amount,
 					"reference_type": "Loan",
 					"reference_name": loan,
-					"cost_center": erpnext.get_default_cost_center(company),
+					"cost_center": kb_pro.get_default_cost_center(company),
 				},
 			],
 			"remarks": remark,

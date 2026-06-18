@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import getdate
 
-from erpnext.accounts.general_ledger import make_reverse_gl_entries
+from kb_pro.accounts.general_ledger import make_reverse_gl_entries
 
 
 class LoanAccrualRepost(Document):

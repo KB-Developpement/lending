@@ -25,7 +25,7 @@ lending.common = {
 						}
 					}
 				});
-				erpnext.hide_company();
+				kb_pro.hide_company();
 			},
 
 			applicant: function(frm) {

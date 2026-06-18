@@ -3,7 +3,7 @@
 """Harmonise la terminologie française de l'app lending.
 
 Certaines chaînes (Applicant Name, Collection Offset Sequence…, Loan Demand) sont
-traduites par les apps frappe/erpnext (qui priment sur le fr.po de lending). Pour
+traduites par les apps frappe/kb_pro (qui priment sur le fr.po de lending). Pour
 imposer un vocabulaire cohérent côté UI (Demandeur, Recouvrement/Imputation,
 Échéance) sans modifier les fichiers de ces apps, ce patch crée des enregistrements
 « Translation » personnalisés (priorité maximale dans Frappe).

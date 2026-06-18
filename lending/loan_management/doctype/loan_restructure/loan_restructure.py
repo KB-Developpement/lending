@@ -7,7 +7,7 @@ from frappe.query_builder import DocType
 from frappe.query_builder import functions as fn
 from frappe.utils import add_days, cint, flt, getdate
 
-from erpnext.controllers.accounts_controller import AccountsController
+from kb_pro.controllers.accounts_controller import AccountsController
 
 from lending.loan_management.doctype.loan.loan import (
 	update_all_linked_loan_customer_npa_status,

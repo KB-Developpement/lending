@@ -122,7 +122,7 @@ class TestLoanSecurityShortfall(LendingTestSuite):
 		)
 
 	def test_security_shortfall_at_customer_level_security_pledging(self):
-		from erpnext.selling.doctype.customer.test_customer import get_customer_dict
+		from kb_pro.selling.doctype.customer.test_customer import get_customer_dict
 
 		pledge = [
 			{
