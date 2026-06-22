@@ -605,7 +605,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-06 20:42:01.925166",
+ "modified": "2026-06-21 10:12:09.995876",
  "modified_by": "Administrator",
  "module": "Loan Management",
  "name": "Lending",
@@ -620,7 +620,7 @@
    "role": "Loan Manager"
   }
  ],
- "sequence_id": 0.0,
+ "sequence_id": 8.0,
  "shortcuts": [
   {
    "color": "Grey",
