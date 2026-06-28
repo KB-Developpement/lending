@@ -43,6 +43,12 @@ app_include_js = "lending.bundle.js"
 
 # fixtures
 fixtures = [
+	# Custom Fields added to standard (kb_pro/ERPNext) doctypes by lending — exported
+	# by module so each field is tracked individually in git (see MIGRATION_PLAN.md).
+	# NOTE: the dynamic "Journal Entry Account.reference_type" Property Setter is
+	# intentionally NOT a fixture; it is appended at install time by
+	# make_property_setter_for_journal_entry() in install.py.
+	{"dt": "Custom Field", "filters": [["module", "in", ["Loan Management", "Loan Origination"]]]},
 	{"dt": "Role", "filters": [["role_name", "like", "Loan %"]]},
 	{"dt": "Workflow", "filters": [["name", "in", ("Loan Application Workflow", "Loan Lead Workflow")]]},
 	{"dt": "Workflow State", "filters": [["name", "not in", ("Rejected", "Approved", "Pending")]]},

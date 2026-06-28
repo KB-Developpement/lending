@@ -1,5 +1,4 @@
 import frappe
-from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 from frappe.custom.doctype.property_setter.property_setter import make_property_setter
 
 LOAN_CUSTOM_FIELDS = {
@@ -43,7 +42,13 @@ LOAN_CUSTOM_FIELDS = {
 			"fieldname": "loan_tab",
 			"fieldtype": "Tab Break",
 			"label": "Lending",
-			"insert_after": "default_scrap_warehouse",
+			# Anchor to "dashboard_tab", the last field of kb_pro's Company doctype.
+			# Upstream lending uses "default_scrap_warehouse", but the kb_pro fork removed
+			# that field, leaving loan_tab with a dangling anchor — Frappe then couldn't
+			# place the whole loan field chain and scattered ~half of it into the Dashboard
+			# tab. Anchoring to an existing field makes loan_tab the last tab and keeps all
+			# loan fields together under it.
+			"insert_after": "dashboard_tab",
 		},
 		{
 			"fieldname": "loan_settings",
@@ -169,7 +174,11 @@ LOAN_CUSTOM_FIELDS = {
 			"fieldname": "loan_details_tab",
 			"label": "Loan Details",
 			"fieldtype": "Tab Break",
-			"insert_after": "email_id",
+			# Anchor at the END of the "Address & Contact" tab (kb_pro's last contact field
+			# is num_fix) instead of mid-tab after email_id. Inserting a Tab Break after
+			# email_id splits that tab and traps the fields that follow it
+			# (first_name / last_name / num_mobile / num_fix) inside the Loan Details tab.
+			"insert_after": "num_fix",
 		},
 		{
 			"fieldname": "is_npa",
@@ -287,7 +296,10 @@ def make_property_setter_for_journal_entry():
 
 
 def after_install():
-	create_custom_fields(LOAN_CUSTOM_FIELDS, ignore_validate=True)
+	# Custom Fields are shipped via fixtures (see hooks.py: Custom Field filtered by
+	# module "Loan Management"). Frappe syncs them automatically after install, so they
+	# are no longer created programmatically here. LOAN_CUSTOM_FIELDS is retained as the
+	# canonical field list used by before_uninstall() -> delete_custom_fields().
 	make_property_setter_for_journal_entry()
 	add_server_scripts()
 
