@@ -723,3 +723,34 @@ Write Off Settlement,Kapatma Uzlaşması,
 Written Off,Kapatıldı,
 Written Off Amount,Kapatılan Tutar,
 ZIP Code,Posta Kodu,
+Mise en route — Crédit (Lending),Başlarken — Kredi (Lending),
+Du produit de prêt au remboursement,Kredi ürününden geri ödemeye,
+Configuration terminée — vous êtes prêt !,Yapılandırma tamamlandı — hazırsınız!,
+Vérifier les classifications (règlement 14-03),Sınıflandırmaları kontrol et (14-03 sayılı düzenleme),
+"## Classifications Banque d'Algérie 14-03
+4 classes : **Courantes → Problèmes Potentiels → Très Risquées → Compromises**, déjà configurées avec leurs plages par société.","## Cezayir Merkez Bankası 14-03 Sınıflandırmaları
+4 sınıf: **Cari → Potansiyel Sorunlu → Yüksek Riskli → Batık**, şirket bazında aralıklarıyla birlikte önceden yapılandırılmıştır.",
+Voir les classifications,Sınıflandırmaları görüntüle,
+Décaisser le prêt,Krediyi kullandır,
+"## Décaissement
+Génère l'**échéancier de remboursement** et les **intérêts courus** à partir de la **date de décaissement**.","## Kullandırım
+**Kullandırım tarihinden** itibaren **geri ödeme planını** ve **tahakkuk eden faizleri** oluşturur.",
+Décaisser,Kullandır,
+Créer une demande de prêt,Kredi talebi oluştur,
+"## Demande de prêt
+Demandeur, produit, montant. À **approuver** avant de créer le prêt.","## Kredi Talebi
+Talep eden, ürün, tutar. Kredi oluşturulmadan önce **onaylanmalıdır**.",
+Nouvelle demande,Yeni talep,
+Créer le prêt,Krediyi oluştur,
+"## Prêt
+Créé depuis la demande approuvée. Vérifiez le **taux**, la **durée**, la **date de décaissement**.","## Kredi
+Onaylanmış talepten oluşturulur. **Oranı**, **vadeyi** ve **kullandırım tarihini** kontrol edin.",
+Configurer un produit de prêt,Kredi ürünü yapılandır,
+"## Produit de prêt
+Définissez **taux**, **durée**, et les **comptes** (décaissement, intérêts, à recevoir, pénalités, suspens). Comptes non typés *Receivable* pour l'écriture sans tiers.","## Kredi Ürünü
+**Oranı**, **vadeyi** ve **hesapları** (kullandırım, faiz, alacak, ceza, askı) tanımlayın. Taraf içermeyen kayıt için hesaplar *Receivable* türünde olmamalıdır.",
+Créer un produit de prêt,Kredi ürünü oluştur,
+Enregistrer un remboursement,Geri ödeme kaydet,
+"## Remboursement
+Impute le paiement (principal, intérêts, pénalités) selon la séquence d'imputation.","## Geri Ödeme
+Ödemeyi (anapara, faiz, ceza) mahsup sırasına göre dağıtır.",

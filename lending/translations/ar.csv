@@ -678,3 +678,34 @@ Write Off Recovery Account,حساب استرداد المبالغ المشطوب
 Write Off Settlement,تسوية الشطب,
 Written Off,مشطوب,
 Written Off Amount,المبلغ المشطوب,
+Mise en route — Crédit (Lending),بدء الاستخدام — القرض (Lending),
+Du produit de prêt au remboursement,من منتج القرض إلى السداد,
+Configuration terminée — vous êtes prêt !,اكتمل الإعداد — أنت جاهز!,
+Vérifier les classifications (règlement 14-03),التحقق من التصنيفات (النظام 14-03),
+"## Classifications Banque d'Algérie 14-03
+4 classes : **Courantes → Problèmes Potentiels → Très Risquées → Compromises**, déjà configurées avec leurs plages par société.","## تصنيفات بنك الجزائر 14-03
+4 فئات: **جارية → مشاكل محتملة → عالية المخاطر → متعثرة**، تم إعدادها مسبقًا بنطاقاتها الخاصة بكل شركة.",
+Voir les classifications,عرض التصنيفات,
+Décaisser le prêt,صرف القرض,
+"## Décaissement
+Génère l'**échéancier de remboursement** et les **intérêts courus** à partir de la **date de décaissement**.","## الصرف
+يُنشئ **جدول السداد** و**الفوائد المستحقة** انطلاقًا من **تاريخ الصرف**.",
+Décaisser,صرف,
+Créer une demande de prêt,إنشاء طلب قرض,
+"## Demande de prêt
+Demandeur, produit, montant. À **approuver** avant de créer le prêt.","## طلب القرض
+مقدّم الطلب، المنتج، المبلغ. يجب **اعتماده** قبل إنشاء القرض.",
+Nouvelle demande,طلب جديد,
+Créer le prêt,إنشاء القرض,
+"## Prêt
+Créé depuis la demande approuvée. Vérifiez le **taux**, la **durée**, la **date de décaissement**.","## القرض
+يُنشأ من الطلب المعتمد. تحقق من **المعدل**، و**المدة**، و**تاريخ الصرف**.",
+Configurer un produit de prêt,إعداد منتج قرض,
+"## Produit de prêt
+Définissez **taux**, **durée**, et les **comptes** (décaissement, intérêts, à recevoir, pénalités, suspens). Comptes non typés *Receivable* pour l'écriture sans tiers.","## منتج القرض
+حدد **المعدل**، و**المدة**، و**الحسابات** (الصرف، الفوائد، المستحقات، الغرامات، المعلق). حسابات غير مصنّفة كـ *Receivable* للقيد بدون طرف.",
+Créer un produit de prêt,إنشاء منتج قرض,
+Enregistrer un remboursement,تسجيل سداد,
+"## Remboursement
+Impute le paiement (principal, intérêts, pénalités) selon la séquence d'imputation.","## السداد
+يُخصص الدفعة (الأصل، الفوائد، الغرامات) وفق تسلسل التخصيص.",
